@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>Movie App</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <a href="#" class="logo">
+            <ion-icon class="movie" name="videocam-outline"></ion-icon>Movies
+        </a>
+        <i class='bx bx-menu' id="menu-icon" ></i>
+
+        <ul class="navbar">
+            <li><a href="#home" class="home-active">Home</a></li>
+            <li><a href="#movies">Movies</a></li>
+            <li><a href="#trending">Trending</a></li>
+            <li><a href="#newsletter">Newsletter</a></li>
+        </ul>
+        <a href="#" class="btn">Sign-in</a>
+    </header>
+
+    <!-- home -->
+    <section class="home swiper" id="home">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" id="container">
+                <img src="https://wallpapers-hub.art/wallpaper-images/624649.jpg" alt="" />
+                <div class="home-text">
+                    <span>Marvel Universe</span>
+                    <h1>
+                        venom: Let there <br />
+                        Be carnage
+                    </h1>
+                    <a href="#" class="btn">Book Now</a>
+                </div>
+                <a href="#" class="play">
+                    <ion-icon name="play"></ion-icon>
+                </a>
+            </div>
+            <div class="swiper-slide" id="container">
+                <img src="https://images.hdqwalls.com/download/avengers-infinity-war-2018-10k-poster-yp-7680x4320.jpg"
+                    alt="" />
+                <div class="home-text">
+                    <span>Marvel Universe</span>
+                    <h1>
+                        Avengers <br />
+                        Infinity war
+                    </h1>
+                    <a href="#" class="btn">Book Now</a>
+                </div>
+                <a href="#" class="play">
+                    <ion-icon name="play"></ion-icon>
+                </a>
+            </div>
+            <div class="swiper-slide" id="container">
+                <img src="https://wallpapers.com/images/featured/spider-man-far-from-home-dgpa9a5b5vxj5ehf.jpg"
+                    alt="" />
+                <div class="home-text">
+                    <span>Marvel Universe</span>
+                    <h1>
+                        SpiderMan <br />
+                        Far from home
+                    </h1>
+                    <a href="#" class="btn">Book Now</a>
+                </div>
+                <a href="#" class="play">
+                    <ion-icon name="play"></ion-icon>
+                </a>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </section>
+
+    <!-- movies -->
+    <section class="movies" id="movies">
+        <div class="movies-container">
+            <div class="movies-top">
+                <h2 class="movies-title"></h2>
+                <div class="btns">
+                    <button class="movies-btn btn" onclick="fetchContent('popular')">Popular</button>
+                    <button class="tvshows-btn btn" onclick="fetchContent('toprated')">Toprated</button>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="movies-wrapper" id="contentWrapper">
+            </div>
+    </section>
+    <!-- Trending -->
+    <section class="trending" id="trending">
+        <div class="trending-container">
+            <div class="trending-top">
+                <h2 class="trending-title">Trending</h2>
+                <div class="btns">
+                    <button class="movies-btn btn" onclick="fetchTrendingContent('movies')">Movies</button>
+                    <button class="tvshows-btn btn" onclick="fetchTrendingContent('tvshows')">TVShows</button>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="trending-wrapper" id="trendingWrapper">
+            </div>
+    </section>
+
+    <!-- newletter -->
+    <section class="newsletter" id="newsletter">
+        <h2>Subscribe to get <br> Newsletter</h2>
+        <form action="">
+            <input type="email" class="email" placeholder="Enter Email..." required>
+            <input type="submit" value="Subscribe" class="btn">
+        </form>
+    </section>
+
+    <!-- footer -->
+    <section class="footer">
+        <a href="#" class="logo">
+            <ion-icon class="movie" name="videocam-outline"></ion-icon>Movies
+        </a>
+
+        <div class="social">
+            <a href=""><i class='bx bxl-facebook'></i></a>
+            <a href=""><i class='bx bxl-twitter' ></i></a>
+            <a href=""><i class='bx bxl-instagram' ></i></a>
+            <a href=""><i class='bx bxl-github' ></i></a>
+        </div>
+    </section>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- main js -->
+    <script src="main.js"></script>
+</body>
+
+</html>
